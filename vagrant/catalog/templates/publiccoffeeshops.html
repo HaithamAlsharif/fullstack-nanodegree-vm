@@ -1,0 +1,33 @@
+<html>
+    <head>
+<title>CoffeeShops</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    </head>
+    <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="/">View all coffee shops</a>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <span class="navbar-text"><a href="/login">Login</a></span>
+            </div>
+    </nav>
+    <div class="container">
+        <div class="jumbotron">
+                <h1 class="display-4">Coffee Shops</h1>
+                <p class="lead">These are all the coffee shops we have available ! <br> click "View" to see more !</p>
+                <hr class="my-4">
+        </div> 
+    </div>
+
+    <div class="container">
+            <ul class="list-group">
+                {% for cShop in coffeeshops %}
+                <li class="list-group-item">
+                    {{cShop.name}}
+                    <a href="{{url_for('displayCoffeShopMenu', coffeeshop_id = cShop.id)}}" class="float-right">View</a>
+                </li>
+                {% endfor %}
+            </ul>      
+    </div>
+    </body>
+</html>    

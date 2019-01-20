@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Add new menu item</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> 
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="/">View all coffee shops</a>
+            <div class="collapse navbar-collapse" id="navbarText">
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="jumbotron">
+                <h1 class="text-center">Type the information to edit the item !</h1>
+                <hr>
+                <form action="#" method="POST">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-sizing-default">Name:</span>
+                            </div>
+                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="name" id="name" required>
+
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-sizing-default">Description:</span>
+                            </div>
+                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="description" id="description" required>
+
+                            <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-default">Price:</span>
+                            </div>
+                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="price" id="price" required>
+                        </div>           
+                        <input type="submit" value="Edit!" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

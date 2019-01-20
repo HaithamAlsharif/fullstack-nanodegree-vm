@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>{{coffeeshop.name}} menu</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="/">View all coffee shops</a>
+            <div class="collapse navbar-collapse" id="navbarText">
+            </div>
+        </nav>
+        <div class="container">
+            <div class="jumbotron">
+                    <h1 class="text-center">This menu is for {{ coffeeshop.name }} </h1>
+                    <hr>
+        <div class="container">
+            {% for item in items %}
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action disabled ">
+                    <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">{{item.name}}</h5>
+                    <small>${{item.price}}</small>
+                    </div>
+                    <p class="mb-1">{{item.description}}</p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        <hr>
+    </body>
+</html>
